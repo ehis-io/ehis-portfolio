@@ -13,10 +13,10 @@ export default function Home() {
     <div className={styles.home}>
       <div className={styles.container}>
         <main className={styles.textArea}>
-          <h1 className={styles.headingOne}>Hey, I'm Ehis Fidelis</h1>
-          <h2 className={styles.headingTwo}>I'm a software engineer.</h2>
+          <h1 className={styles.headingOne}>Hey, I&apos;m Ehis Fidelis</h1>{' '}
+          <h2 className={styles.headingTwo}>I&apos;m a software engineer.</h2>
           <h3 className={styles.headingThree}>
-            I build systems that make sense — even when the world doesn’t.
+            I build systems that make sense — even when the world doesn&rsquo;t.
           </h3>
           <p className={styles.description}>
             {typingText}
