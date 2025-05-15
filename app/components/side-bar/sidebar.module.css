@@ -1,0 +1,34 @@
+.sideBar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 60px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 8px var(--shadow-color);
+  z-index: 1000;
+  border-radius: 0 8px 8px 0;
+}
+
+.sideBarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .sideBar {
+    display: none;
+  }
+
+  .sideBarContent {
+    display: none;
+  }
+}
