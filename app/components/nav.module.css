@@ -10,7 +10,7 @@
   font-weight: bold;
   margin-left: 3em;
   width: fit-content;
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .navbar {
@@ -34,7 +34,7 @@
   padding-right: 2.5rem;
   padding-left: 2.5rem;
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--text-color);
 }
 
 .linkItem:hover {
@@ -58,7 +58,7 @@
 .resumeButton {
   background-color: var(--primary-color);
   color: var(--text-color);
-  border: 1px var(--text-muted);
+  border: 1px var(--text-color);
   padding: 0.3rem 0.5rem;
 
   border-radius: 5px;

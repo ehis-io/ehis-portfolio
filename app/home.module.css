@@ -16,8 +16,8 @@
   font-size: 4rem;
   font-weight: bold;
   color: var(--text-color);
-  margin-top: rem;
-  text-shadow: 0px 0px 5px var(--accent-color);
+  margin-top: 1rem;
+  text-shadow: 0px 0px 5px var(--shadow-accent);
 }
 
 .headingTwo {
