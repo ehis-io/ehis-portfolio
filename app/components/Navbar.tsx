@@ -1,0 +1,58 @@
+'use client'
+
+import { useState } from 'react'
+import styles from './nav.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  return (
+    <main className={styles.main}>
+      <div className={styles.name}>
+        <h1> Ehis Fidelis</h1>
+      </div>
+
+      <nav
+        className={`${styles.navbar} ${menuOpen ? styles.open : styles.close}`}
+      >
+        <ul className={styles.links}>
+          <li>
+            <a className={styles.linkItem} href="#about">
+              About
+            </a>
+          </li>
+          <li>
+            <a className={styles.linkItem} href="#projects">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a className={styles.linkItem} href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div className={styles.right}>
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vRkUMEkc1jwGwfeISJbb_wSct6qS4tiHxXxKkRgzEZ_cZvlmaxf4ZXahEm-eNULC-L8iq-aUZm-Vppo/pub"
+          className={styles.resumeButton}
+        >
+          <button className={styles.resumeButton}>Resume</button>
+        </a>
+      </div>
+
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        {' '}
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+      </div>
+    </main>
+  )
+}

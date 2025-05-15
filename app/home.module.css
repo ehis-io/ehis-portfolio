@@ -1,0 +1,98 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 2rem;
+}
+
+.headingOne {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: rem;
+  text-shadow: 0px 0px 5px var(--accent-color);
+}
+
+.headingTwo {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+.headingThree {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+.description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.resumeButton {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  margin-top: 4rem;
+  padding: 1rem 4rem 1rem 4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px var(--accent-color);
+  align-self: center;
+}
+
+.resumeButton:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 10px var(--accent-color);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+  color: #6a0dad; /* Match your purple theme */
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .headingOne {
+    font-size: 3rem;
+  }
+  .headingTwo {
+    font-size: 1.2rem;
+  }
+  .headingThree {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .resumeButton {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+  }
+
+  .textArea {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1;
+  }
+}
