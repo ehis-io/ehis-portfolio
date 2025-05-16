@@ -5,6 +5,7 @@ import './colors.css'
 import ThemeInitializer from './hooks/ThemeInitializer'
 import '../lib/fontawesome'
 import Sidebar from './components/side-bar/Sidebar'
+import Footer from './components/footer/Footer'
 export const metadata: Metadata = {
   title: 'Ehis Fidelis',
   description: 'Portfolio of Ehis Fidelis',
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Sidebar />
 
         {children}
+        <Footer />
       </body>
     </html>
   )

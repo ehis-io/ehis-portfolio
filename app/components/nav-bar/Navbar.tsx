@@ -36,7 +36,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a className={styles.linkItem} href="#contact">
+            <a className={styles.linkItem} href="/contact">
               Contact
             </a>
           </li>

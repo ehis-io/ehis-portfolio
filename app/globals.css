@@ -29,6 +29,11 @@ h3,
 h4,
 h5,
 h6,
-p {
+div,
+footer p {
   color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
 }

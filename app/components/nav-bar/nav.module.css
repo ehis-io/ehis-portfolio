@@ -118,26 +118,37 @@
   .resumeButton {
     display: none;
   }
-
   .links {
-    display: none;
     flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
   }
 
   .navbar {
     width: 100%;
-    display: none;
+    display: none; /* hidden by default */
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
   }
-
   .navbar.open {
-    /* display: flex; */
+    display: flex;
+    position: absolute;
+    top: 10vh; /* just below your main navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .navbar.open .links {
+    display: flex;
   }
 }

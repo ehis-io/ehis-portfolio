@@ -2,7 +2,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  flex-direction: column;
+}
+.sectionOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-color);
+}
+.sectionTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .textArea {
@@ -36,8 +64,29 @@
   color: var(--text-muted);
 }
 
-.resumeButton {
+.projectsButton {
   background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  margin-top: 4rem;
+  margin-right: 2rem;
+  padding: 1rem 4rem 1rem 4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px var(--accent-color);
+  align-self: center;
+}
+
+.projectsButton:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 10px var(--accent-color);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.resumeButton {
+  background-color: var(--background-color);
   color: var(--text-color);
   border: none;
   margin-top: 4rem;
@@ -47,10 +96,11 @@
   font-size: 1rem;
   box-shadow: 0px 0px 5px var(--accent-color);
   align-self: center;
+  text-decoration: none;
 }
 
 .resumeButton:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 0px 10px var(--accent-color);
   transform: scale(1.05);
   cursor: pointer;
@@ -60,7 +110,30 @@
   display: inline-block;
   width: 1ch;
   animation: blink 1s steps(2, start) infinite;
-  color: #6a0dad; /* Match your purple theme */
+  color: green;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding-bottom: 4rem;
+
+  background-color: var(--primary-color);
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
 @keyframes blink {
