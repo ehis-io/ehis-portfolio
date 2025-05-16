@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import styles from './home.module.css'
 import { useLoopingTypingEffect } from './hooks/useTypingEffect'
 
@@ -24,7 +25,9 @@ export default function Home() {
               {typingText}
               <span className={styles.cursor}>|</span>
             </p>
-            <button className={styles.projectsButton}> Projects</button>
+            <Link href="/projects" className={styles.projectsButton}>
+              Projects
+            </Link>
           </main>
         </div>
       </section>

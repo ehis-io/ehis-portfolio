@@ -66,6 +66,7 @@
 
 .projectsButton {
   background-color: var(--accent-color);
+  text-decoration: none;
   color: var(--text-color);
   border: none;
   margin-top: 4rem;
