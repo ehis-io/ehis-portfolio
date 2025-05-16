@@ -39,27 +39,38 @@ export default function Home() {
             <div className={styles.about}>
               <p>
                 I&rsquo;m Ehis Fidelis, a software engineer who focuses on
-                backend systems, infrastructure, and applied AI. I work mostly
-                with NestJS, Go, and Python, building APIs, microservices, and
-                automation tools.
+                backend systems, infrastructure, and applied AI. I primarily
+                work with NestJS, Go, and Python—building APIs, distributed
+                microservices, and automation tools that need to scale reliably.
               </p>
               <p>
-                I&rsquo;ve built systems like real estate auction platforms and
-                an AI-powered health app, where I handled both the backend and
-                the machine learning pipeline.
+                My experience spans building real estate auction platforms with
+                dynamic bidding logic, and leading the backend and AI pipelines
+                for HerSync, an AI-powered menstrual health app. I&rsquo;ve also
+                written custom scrapers and automation tools using Puppeteer,
+                and deployed them on Google Cloud with thoughtful resource and
+                security configurations.
               </p>
               <p>
-                My day-to-day includes working with containers, setting up CI/CD
-                workflows, monitoring performance, and writing code that
-                doesn&rsquo;t fall apart under load.
+                On a daily basis, I work with Docker, PostgreSQL, Redis, and
+                GitHub Actions. I design CI/CD workflows, monitor system
+                performance, implement failover strategies, and write
+                production-ready code that can handle high concurrency and
+                complex business logic.
               </p>
               <p>
-                Outside of software, I play guitar and spend time learning about
-                financial markets, cybersecurity and ethical hacking,
-                philosophy, and blockchain systems. I like anything that makes
-                me think in systems and patterns. I&rsquo;m not trying to sound
-                impressive. I just like building things that work and make
-                sense.
+                Outside of software, I explore audio Enginering , play guitar
+                and I&rsquo;m always learning something new. Lately, I&rsquo;ve
+                been diving into financial markets, cybersecurity (especially
+                ethical hacking), philosophy, and blockchain systems. I enjoy
+                exploring systems and finding patterns that make things work
+                better.
+              </p>
+              <p>
+                I&rsquo;m not trying to sound impressive. I just like building
+                things that work, that are cleanly designed, and that hold up
+                when things get chaotic. That&rsquo;s what excites me most about
+                engineering.
               </p>
             </div>
 
