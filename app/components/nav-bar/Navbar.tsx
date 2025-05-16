@@ -4,6 +4,7 @@ import { useState } from 'react'
 import styles from './nav.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -15,7 +16,9 @@ export default function Navbar() {
   return (
     <main className={styles.main}>
       <div className={styles.name}>
-        <h1> Ehis Fidelis</h1>
+        <Link className={styles.nameLink} href="/">
+          <h1>Ehis Fidelis</h1>
+        </Link>
       </div>
 
       <nav

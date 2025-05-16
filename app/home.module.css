@@ -41,6 +41,7 @@
   color: var(--text-color);
   border: none;
   margin-top: 4rem;
+  margin-left: 1rem;
   padding: 1rem 4rem 1rem 4rem;
   border-radius: 5px;
   font-size: 1rem;
@@ -70,7 +71,7 @@
 
 @media (max-width: 768px) {
   .headingOne {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   .headingTwo {
     font-size: 1.3rem;

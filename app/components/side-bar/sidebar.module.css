@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 0 8px var(--shadow-color);
+  box-shadow: 1px 0 2px var(--accent-color);
   z-index: 1000;
   border-radius: 0 8px 8px 0;
 }
@@ -21,6 +21,9 @@
   color: var(--text-color);
   font-size: 1.5rem;
   padding: 1rem 0;
+}
+.icon {
+  color: black;
 }
 
 @media (max-width: 768px) {
