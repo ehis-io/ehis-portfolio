@@ -40,7 +40,7 @@ export default function Home() {
               <p>
                 I&rsquo;m Ehis Fidelis, a software engineer who focuses on
                 backend systems, infrastructure, and applied AI. I primarily
-                work with NestJS, Go, and Python—building APIs, distributed
+                work with NestJS, Go, and Python for building APIs, distributed
                 microservices, and automation tools that need to scale reliably.
               </p>
               <p>
