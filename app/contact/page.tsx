@@ -54,7 +54,7 @@ export default function ContactUs() {
           onClick={handleCopy}
         >
           <FaPhoneAlt className="text-2xl text-yellow-500" />
-          <span>{copied ? 'Copied!' : '+234 816 1331 780'}</span>
+          <span>{copied ? 'Copied!' : '+2347060464123'}</span>
         </button>
       </div>
     </div>
