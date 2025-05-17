@@ -26,7 +26,7 @@ export default function Navbar() {
       >
         <ul className={styles.links}>
           <li>
-            <a className={styles.linkItem} href="#about">
+            <a className={styles.linkItem} href="/about">
               About
             </a>
           </li>

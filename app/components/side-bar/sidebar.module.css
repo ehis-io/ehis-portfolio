@@ -23,7 +23,7 @@
   padding: 1rem 0;
 }
 .icon {
-  color: black;
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {

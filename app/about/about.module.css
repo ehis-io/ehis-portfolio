@@ -1,0 +1,181 @@
+.main {
+  background-color: var(--background-color);
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.03'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sectionOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.sectionTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--background-color);
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.04'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 2rem;
+}
+
+.headingOne {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 1rem;
+  text-shadow: 0px 0px 5px var(--shadow-accent);
+}
+
+.headingTwo {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+.headingThree {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+.description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.projectsButton {
+  background-color: var(--accent-color);
+  text-decoration: none;
+  color: var(--text-color);
+  border: none;
+  margin-top: 4rem;
+  margin-right: 2rem;
+  padding: 1rem 4rem 1rem 4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px var(--accent-color);
+  align-self: center;
+}
+
+.projectsButton:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 10px var(--accent-color);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.resumeButton {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  margin-top: 4rem;
+  margin-left: 1rem;
+  padding: 1rem 4rem 1rem 4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px var(--accent-color);
+  align-self: center;
+  text-decoration: none;
+}
+
+.resumeButton:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 10px var(--accent-color);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+  color: green;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 80vw;
+  padding-bottom: 4rem;
+  background-color: var(--primary-color);
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .headingOne {
+    font-size: 2.1rem;
+  }
+  .headingTwo {
+    font-size: 1.3rem;
+  }
+  .headingThree {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .resumeButton {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+  }
+  .about {
+    padding-bottom: 1rem;
+  }
+
+  .textArea {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1;
+  }
+}
