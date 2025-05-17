@@ -5,13 +5,19 @@ import { FaWhatsapp, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import styles from './contact.module.css'
 
 export default function ContactUs() {
+  const [revealed, setRevealed] = useState(false)
   const [copied, setCopied] = useState(false)
 
+  // Obfuscated phone number
+  const phoneNumber = `+234${'706'}${'046'}${'4123'}`
+
   const handleCopy = async () => {
+    if (!revealed) return
+
     try {
-      await navigator.clipboard.writeText('+2348161331780')
+      await navigator.clipboard.writeText(phoneNumber)
       setCopied(true)
-      setTimeout(() => setCopied(false), 2000) // reset after 2s
+      setTimeout(() => setCopied(false), 2000)
     } catch (err) {
       console.error('Failed to copy:', err)
     }
@@ -20,14 +26,14 @@ export default function ContactUs() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>Contact me</h1>
+        <h1 className={styles.title}>Contact Me</h1>
         <p className={styles.subtitle}>
-          I&rsquo;d love to hear from you. Reach out via any of the options
-          below!
+          I’d love to hear from you. Reach out via any of the options below!
         </p>
       </div>
 
       <div className={styles.links}>
+        {/* WhatsApp */}
         <a
           href="https://wa.me/2347060464123"
           target="_blank"
@@ -35,9 +41,10 @@ export default function ContactUs() {
           className={`${styles.link} ${styles.whatsapp}`}
         >
           <FaWhatsapp className="text-2xl" />
-          <span>Chat on WhatsApp</span>
+          <span>Chat</span>
         </a>
 
+        {/* Email */}
         <a
           href="mailto:meelisfidelis@gmail.com"
           target="_blank"
@@ -45,16 +52,16 @@ export default function ContactUs() {
           className={`${styles.link} ${styles.email}`}
         >
           <FaEnvelope className="text-2xl" />
-          <span>Send us an Email</span>
+          <span>Email</span>
         </a>
 
-        {/* Click-to-copy phone number */}
+        {/* Reveal + Copy Phone Number */}
         <button
           className={`${styles.link} ${styles.phone}`}
-          onClick={handleCopy}
+          onClick={revealed ? handleCopy : () => setRevealed(true)}
         >
           <FaPhoneAlt className="text-2xl text-yellow-500" />
-          <span>{copied ? 'Copied!' : '+2347060464123'}</span>
+          <span>{revealed ? (copied ? 'Copied!' : phoneNumber) : ''}</span>
         </button>
       </div>
     </div>
