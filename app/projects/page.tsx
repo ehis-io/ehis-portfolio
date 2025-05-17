@@ -31,18 +31,9 @@ const projects = [
     link: '',
   },
   {
-    title: 'Tafipal',
-    description:
-      'Developed MomentsX, an AI-powered SaaS hosting and ticketing platform for managing special experiences like tours and social events. Integrated AI features for personalized recommendations.',
-    stack: ['NodeJs', 'PostgreSQL', 'HTML', 'CSS'],
-    imageUrl:
-      'https://res.cloudinary.com/tafi-cloud/image/upload/v1672161120/email-template/Tafipal_ALONE_rvgoi1.png',
-    link: 'https://tafipal.com',
-  },
-  {
     title: 'MomentsX',
     description:
-      'Developed MomentsX, an AI-powered SaaS hosting and ticketing platform for managing special experiences like tours and social events. Integrated AI features for personalized recommendations.',
+      'Developed MomentsX, an AI-powered SaaS hosting and ticketing platform for managing special experiences  social events. Integrated AI features for personalized recommendations.',
     stack: ['NodeJs', 'PostgreSQL', 'HTML', 'CSS'],
     imageUrl: 'https://momentsxnately.com/wp-content/uploads/2025/02/MS1.png',
     link: 'momentsxnately.com/',
@@ -56,6 +47,17 @@ const projects = [
       'https://res.cloudinary.com/podcast-file/image/upload/v1747433153/abaru_logo_ixflzf.jpg',
     link: 'https://abaru.io',
   },
+
+  {
+    title: 'Tafipal',
+    description:
+      'Developed Tafipal, a ticketing platform for managing special experiences like tours and social events. ',
+    stack: ['NodeJs', 'PostgreSQL', 'HTML', 'CSS'],
+    imageUrl:
+      'https://res.cloudinary.com/tafi-cloud/image/upload/v1672161120/email-template/Tafipal_ALONE_rvgoi1.png',
+    link: 'https://tafipal.com',
+  },
+
   {
     title: 'Dutch Token Swap',
     description:
