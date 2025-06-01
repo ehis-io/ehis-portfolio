@@ -26,19 +26,19 @@ export default function Navbar() {
       >
         <ul className={styles.links}>
           <li>
-            <a className={styles.linkItem} href="/about">
+            <Link href="/about" className={styles.linkItem}>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a className={styles.linkItem} href="/projects">
+            <Link href="/projects" className={styles.linkItem}>
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a className={styles.linkItem} href="/contact">
+            <Link href="/contact" className={styles.linkItem}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
