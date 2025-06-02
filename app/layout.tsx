@@ -7,9 +7,13 @@ import '../lib/fontawesome'
 import Sidebar from './components/side-bar/Sidebar'
 import Footer from './components/footer/Footer'
 
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
 
 export const metadata: Metadata = {
   title: 'Ehis Fidelis',
@@ -23,11 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>
+      <body className={`${inter.variable} ${playfair.variable}`}>
+        {' '}
         <ThemeInitializer />
         <Navbar />
         <Sidebar />
-
         {children}
         <Footer />
       </body>
