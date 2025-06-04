@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'HerSync',
     description:
-      'AI-powered menstrual health app with a NestJS + Python backend. Features personalized cycle prediction, anomaly detection, and Puppeteer automation deployed on Google Cloud.',
+      'AI-powered menstrual health app with a NestJS + Python backend. Features personalized cycle prediction, anomaly detection.',
     stack: ['NodeJS', 'Python', 'postgreSQL'],
     imageUrl:
       'https://res.cloudinary.com/podcast-file/image/upload/v1747433667/hersync_lb32te.jpg',
