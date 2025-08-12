@@ -7,12 +7,24 @@ import '../lib/fontawesome'
 import Sidebar from './components/side-bar/Sidebar'
 import Footer from './components/footer/Footer'
 
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display, Michroma, Megrim } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
+})
+
+const megrim = Megrim({
+  variable: '--font-megrim',
+  weight: '400', // required for Megrim
+  subsets: ['latin'],
+})
+
+const michroma = Michroma({
+  variable: '--font-michroma',
+  weight: '400', // required for Megrim
+  subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
@@ -27,7 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body
+        className={`${inter.variable} ${playfair.variable} ${michroma.variable} ${megrim.variable}`}
+      >
         {' '}
         <ThemeInitializer />
         <Navbar />

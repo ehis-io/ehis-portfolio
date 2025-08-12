@@ -7,36 +7,60 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  // const [menuOpen, setMenuOpen] = useState(false)
+
+  // const toggleMenu = () => {
+  //   setMenuOpen(!menuOpen)
+  // }
+
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
+    setIsOpen(!isOpen)
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false)
   }
 
   return (
     <main className={styles.main}>
       <div className={styles.name}>
         <Link className={styles.nameLink} href="/">
-          <h1>Ehis Fidelis</h1>
+          <h1 className={styles.header}>Ehis Fidelis</h1>
         </Link>
       </div>
 
       <nav
-        className={`${styles.navbar} ${menuOpen ? styles.open : styles.close}`}
+        className={`${styles.navbar} ${isOpen ? styles.open : styles.close}`}
       >
         <ul className={styles.links}>
           <li>
-            <Link href="/about" className={styles.linkItem}>
-              About
+            <Link href="/" onClick={closeMenu} className={styles.linkItem}>
+              Home
             </Link>
           </li>
           <li>
-            <Link href="/projects" className={styles.linkItem}>
+            <Link href="/about" onClick={closeMenu} className={styles.linkItem}>
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/projects"
+              onClick={closeMenu}
+              className={styles.linkItem}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={styles.linkItem}>
+            <Link
+              href="/contact"
+              onClick={closeMenu}
+              className={styles.linkItem}
+            >
               Contact
             </Link>
           </li>
@@ -54,7 +78,7 @@ export default function Navbar() {
 
       <div className={styles.hamburger} onClick={toggleMenu}>
         {' '}
-        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </div>
     </main>
   )

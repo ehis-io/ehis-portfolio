@@ -26,6 +26,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 640px) {
+  .title {
+    font-size: x-large;
+  }
+}
 
 @media (min-width: 1024px) {
   .grid {
@@ -102,7 +107,7 @@
 .viewButton {
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: var(--primary-color);
   border: none;
   border-radius: 999px;
