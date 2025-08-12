@@ -92,6 +92,7 @@ export default function ProjectsSection() {
               />
               <h3 className={styles.titleCard}>{project.title}</h3>
               <p className={styles.description}>{project.description}</p>
+
               <div className={styles.techStack}>
                 {project.stack.map((tech, i) => (
                   <span key={i} className={styles.techItem}>
