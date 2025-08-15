@@ -7,12 +7,6 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 export default function Navbar() {
-  // const [menuOpen, setMenuOpen] = useState(false)
-
-  // const toggleMenu = () => {
-  //   setMenuOpen(!menuOpen)
-  // }
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
