@@ -1,9 +1,10 @@
-.mainContainer {
+.main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
   border-bottom: 2px solid var(--text-muted);
+  background-color: var(--background-color);
 }
 
 .name {

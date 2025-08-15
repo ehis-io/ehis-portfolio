@@ -18,7 +18,7 @@ export default function Navbar() {
   };
 
   return (
-    <main className={styles.mainContainer}>
+    <main className={styles.main}>
       <div className={styles.name}>
         <Link className={styles.nameLink} href="/">
           <h1 className={styles.header}>Ehis Fidelis</h1>
