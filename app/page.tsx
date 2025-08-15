@@ -53,7 +53,7 @@ export default function Home() {
                   doesn&rsquo;t.
                 </h3>
                 <p className={styles.subtagline}>
-                  Expertise in networking, system architecture, and security.
+                  Networking • System Architecture • Security{" "}
                 </p>
                 <p className={styles.description}>
                   {typingText}
