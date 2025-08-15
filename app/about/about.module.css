@@ -138,11 +138,13 @@
 @media (max-width: 768px) {
   .main {
     height: fit-content;
-    padding-top: 250px; /* taller mobile navbar */
-    padding-bottom: 250px;
+    padding-top: 25px; /* taller mobile navbar */
+    padding-bottom: 25px;
   }
   .about {
     height: max-content;
+    text-align: center;
+    font-size: 0.8em;
   }
 
   .home {

@@ -15,3 +15,18 @@
   --text-color: #eaeaea; /* Slightly brighter than #f0f0f0 */
   --text-muted: #b0b0b0; /* Clear but not distracting */
 }
+
+:root {
+  --gradient-1: #ffffff;
+  --gradient-2: #f0f8ff; /* alice blue */
+  --gradient-3: #e6f0ff; /* soft pastel blue */
+  --gradient-4: #ffffff;
+}
+
+.dark {
+  --gradient-1: #000000; /* black */
+  --gradient-2: #0a1c1c; /* very dark teal */
+  --gradient-3: #163333; /* muted teal-gray */
+  --gradient-4: #000000;
+  /* loop back to green */
+}

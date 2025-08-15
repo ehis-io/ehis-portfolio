@@ -1,8 +1,8 @@
 .section {
   padding: 3rem 1.5rem;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.03'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.03'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E"); */
 }
 
 .title {
@@ -19,17 +19,6 @@
   grid-template-columns: repeat(1, 1fr);
   row-gap: 3rem;
   column-gap: 2rem;
-}
-
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .title {
-    font-size: x-large;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -52,7 +41,13 @@
 }
 
 .card {
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    270deg,
+    var(--gradient-1),
+    var(--gradient-2),
+    var(--gradient-3),
+    var(--gradient-4)
+  );
   border-radius: 1.25rem;
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -69,7 +64,13 @@
   object-fit: scale-down;
   height: 180px;
   margin-bottom: 1.25rem;
-  background-color: var(--background-color);
+  background: linear-gradient(
+    270deg,
+    var(--gradient-1),
+    var(--gradient-2),
+    var(--gradient-3),
+    var(--gradient-4)
+  );
 }
 
 .titleCard {
@@ -121,4 +122,96 @@
 .viewButton:hover {
   background-color: #357a38;
   transform: scale(1.03);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1040px) {
+  .title {
+    font-size: large;
+  }
+
+  .cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cardLink:hover .card {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(70, 130, 180, 0.25); /* use accent tint */
+  }
+
+  .card {
+    background-color: var(--primary-color);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: background-color 0.3s ease;
+    padding: 1rem;
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: scale-down;
+    height: 100px;
+    margin-bottom: 1.25rem;
+    background-color: var(--background-color);
+  }
+
+  .titleCard {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+  }
+
+  .description {
+    flex-grow: 1;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    letter-spacing: -0.1px;
+  }
+
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .techItem {
+    background-color: var(--background-color);
+    border-radius: 999px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .viewButton {
+    margin-top: 1rem;
+    padding: 0.6rem 1.4rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.7rem;
+    align-self: flex-start;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+  }
 }

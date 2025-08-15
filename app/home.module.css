@@ -17,6 +17,15 @@
   width: 100vw;
 }
 
+.subtagline {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 60ch;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -186,9 +195,19 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .sectionOne {
     height: auto;
+  }
+
+  .subtagline {
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1;
+    max-width: 60ch;
+    text-align: center;
   }
 
   .stats {
@@ -215,16 +234,17 @@
     font-size: small;
   }
   .headingOne {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .headingTwo {
-    font-size: 1.2rem;
-  }
-  .headingThree {
     font-size: 1rem;
   }
+  .headingThree {
+    font-size: 0.8rem;
+    text-align: center;
+  }
   .description {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .resumeButton {

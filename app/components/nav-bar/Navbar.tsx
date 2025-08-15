@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import styles from './nav.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link'
+import { useState } from "react";
+import styles from "./nav.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Navbar() {
   // const [menuOpen, setMenuOpen] = useState(false)
@@ -13,18 +13,18 @@ export default function Navbar() {
   //   setMenuOpen(!menuOpen)
   // }
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const closeMenu = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
-    <main className={styles.main}>
+    <main className={styles.mainContainer}>
       <div className={styles.name}>
         <Link className={styles.nameLink} href="/">
           <h1 className={styles.header}>Ehis Fidelis</h1>
@@ -77,9 +77,9 @@ export default function Navbar() {
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        {' '}
+        {" "}
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </div>
     </main>
-  )
+  );
 }
