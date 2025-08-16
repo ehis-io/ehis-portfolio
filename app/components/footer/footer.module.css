@@ -4,6 +4,7 @@
   color: var(--text-color);
   text-align: center;
   margin-top: auto;
+  position: sticky;
 
   /* important for flex layout */
 }
