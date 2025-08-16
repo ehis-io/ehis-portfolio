@@ -149,6 +149,7 @@
 
   .home {
     height: fit-content;
+    padding-bottom: 3em;
   }
 
   .container {
