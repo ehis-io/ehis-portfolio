@@ -8,6 +8,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .sectionOne {
   display: flex;
   flex-direction: row;
@@ -199,6 +200,9 @@
   .sectionOne {
     height: auto;
   }
+  .home {
+    padding-right: 2em;
+  }
 
   .subtagline {
     color: var(--text-muted);
@@ -245,6 +249,7 @@
   }
   .description {
     font-size: 0.7rem;
+    text-align: center;
   }
 
   .resumeButton {
