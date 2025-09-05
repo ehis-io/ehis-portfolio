@@ -28,6 +28,8 @@ export default function Home() {
   }, []);
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.stars}></div>
+
       <div className={styles.home}>
         <section id="about" className={styles.sectionTwo}>
           <div>
@@ -82,7 +84,7 @@ export default function Home() {
                   href="https://docs.google.com/document/d/e/2PACX-1vRkUMEkc1jwGwfeISJbb_wSct6qS4tiHxXxKkRgzEZ_cZvlmaxf4ZXahEm-eNULC-L8iq-aUZm-Vppo/pub"
                   className={styles.resumeButton}
                 >
-                  Resume
+                  Resume →
                 </a>
               </div>
             </div>
