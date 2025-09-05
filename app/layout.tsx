@@ -1,48 +1,48 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import Navbar from './components/nav-bar/Navbar'
-import './colors.css'
-import ThemeInitializer from './hooks/ThemeInitializer'
-import '../lib/fontawesome'
-import Sidebar from './components/side-bar/Sidebar'
-import Footer from './components/footer/Footer'
+import type { Metadata } from "next";
+import "./globals.css";
+import Navbar from "./components/nav-bar/Navbar";
+import "./colors.css";
+import ThemeInitializer from "./hooks/ThemeInitializer";
+import "../lib/fontawesome";
+import Sidebar from "./components/side-bar/Sidebar";
+import Footer from "./components/footer/Footer";
 
-import { Inter, Playfair_Display, Michroma, Megrim } from 'next/font/google'
+import { Inter, Playfair_Display, Michroma, Megrim } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-})
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 const megrim = Megrim({
-  variable: '--font-megrim',
-  weight: '400', // required for Megrim
-  subsets: ['latin'],
-})
+  variable: "--font-megrim",
+  weight: "400", // required for Megrim
+  subsets: ["latin"],
+});
 
 const michroma = Michroma({
-  variable: '--font-michroma',
-  weight: '400', // required for Megrim
-  subsets: ['latin'],
-})
+  variable: "--font-michroma",
+  weight: "400", // required for Megrim
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: 'Ehis Fidelis',
-  description: 'Portfolio of Ehis Fidelis',
-}
+  title: "Ehis Fidelis",
+  description: "Portfolio of Ehis Fidelis",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={inter.variable}>
       <body
         className={`${inter.variable} ${playfair.variable} ${michroma.variable} ${megrim.variable}`}
       >
-        {' '}
+        {" "}
         <ThemeInitializer />
         <Navbar />
         <Sidebar />
@@ -50,5 +50,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
+  );
 }

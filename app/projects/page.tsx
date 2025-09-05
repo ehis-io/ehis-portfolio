@@ -12,7 +12,7 @@ const projects = [
     link: "https://hersync.com.ng",
   },
   {
-    title: "wasset",
+    title: "Wasset",
     description:
       "Architected and built the backend for a real estate platform using NestJS, supporting real-time bidding and notifications.",
     stack: ["NodeJS", "PostgreSQL", "HTML", "CSS"],
