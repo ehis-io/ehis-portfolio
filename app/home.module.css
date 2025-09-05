@@ -231,6 +231,7 @@
   }
   .home {
     padding-right: 2em;
+    padding-top: 2em;
   }
 
   .subtagline {
@@ -267,18 +268,21 @@
     font-size: small;
   }
   .headingOne {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
   .headingTwo {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding-bottom: 1em;
   }
   .headingThree {
     font-size: 0.8rem;
     text-align: center;
+    padding-bottom: 1em;
   }
   .description {
     font-size: 0.7rem;
     text-align: center;
+    min-height: 6vh;
   }
 
   .resumeButton {
@@ -292,7 +296,10 @@
   }
 
   .projectsButton {
-    margin-top: 0;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-left: 0.2em;
+    padding: 0.7rem 3rem;
   }
 
   .textArea {
@@ -306,6 +313,14 @@
     .stats {
       flex-direction: column;
       align-items: center;
+      padding-left: 2em;
+      padding-top: 2em;
+    }
+
+    .statNumber {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--accent-color); /* your purple or highlight */
     }
   }
 }
