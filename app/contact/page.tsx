@@ -47,6 +47,8 @@ export default function ContactUs() {
 
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.stars}></div>
+
       <div className={styles.container}>
         <div className={`fade-in ${styles.serviceCard}`}>
           <div className={styles.header}>

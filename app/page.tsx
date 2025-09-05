@@ -39,6 +39,7 @@ export default function Home() {
     <div className={styles.mainContainer}>
       <div className={styles.home}>
         <section id="home" className={styles.sectionOne}>
+          <div className={styles.stars}></div>
           <div className={styles.container}>
             <div className={`fade-in ${styles.serviceCard}`}>
               <main className={styles.textArea}>
@@ -60,7 +61,7 @@ export default function Home() {
                   <span className={styles.cursor}>|</span>
                 </p>
                 <Link href="/projects" className={styles.projectsButton}>
-                  Projects
+                  Projects →
                 </Link>
               </main>
             </div>
