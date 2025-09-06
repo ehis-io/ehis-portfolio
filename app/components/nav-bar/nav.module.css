@@ -27,8 +27,9 @@
   text-decoration: none;
 }
 .header {
-  font-family: var(--font-megrim);
+  font-family: var(--font-moo_Lah_Lah);
   color: var(--accent-color);
+  font-size: 3em;
 }
 .header:hover {
   color: var(--text-muted);
