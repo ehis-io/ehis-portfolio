@@ -11,7 +11,6 @@ import {
   Inter,
   Playfair_Display,
   Michroma,
-  Megrim,
   Moo_Lah_Lah,
 } from 'next/font/google';
 
