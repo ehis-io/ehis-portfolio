@@ -9,7 +9,7 @@ export default function ThemeInitializer() {
         '(prefers-color-scheme: dark)'
       ).matches;
       document.documentElement.classList.remove('dark', 'light');
-      document.documentElement.classList.add(prefersDark ? 'dark' : 'light');
+      document.documentElement.classList.add(prefersDark ? 'dark' : 'dark');
     };
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
