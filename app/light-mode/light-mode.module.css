@@ -1,0 +1,69 @@
+.main {
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.textArea {
+  position: relative;
+  z-index: 1;
+  padding: 15vh;
+}
+
+.text {
+  font-size: 2em;
+  color: var(--text);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: radial-gradient(
+      2px 2px at 10% 20%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 30% 40%,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      2px 2px at 70% 80%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 90% 10%,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 100%
+    );
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  background: var(--background-color);
+  color: white;
+  cursor: pointer;
+  font-size: 5em;
+  transition: top 0.2s ease, left 0.2s ease;
+  position: relative;
+  z-index: 4;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px -200px;
+  }
+}

@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import styles from "./nav.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+import { useState } from 'react';
+import styles from './nav.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes, faSun } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +61,15 @@ export default function Navbar() {
         </ul>
       </nav>
 
+      <Link
+        className={styles.lightMode}
+        href="/light-mode"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+      </Link>
+
       <div className={styles.right}>
         <a
           href="https://docs.google.com/document/d/e/2PACX-1vRkUMEkc1jwGwfeISJbb_wSct6qS4tiHxXxKkRgzEZ_cZvlmaxf4ZXahEm-eNULC-L8iq-aUZm-Vppo/pub"
@@ -71,7 +80,7 @@ export default function Navbar() {
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        {" "}
+        {' '}
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </div>
     </main>

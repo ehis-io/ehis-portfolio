@@ -12,6 +12,15 @@
   /* background-color: var(--background-color); */
 }
 
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px -200px; /* moves diagonally */
+  }
+}
+
 .stars {
   position: absolute;
   inset: 0;
@@ -38,6 +47,8 @@
     );
   background-size: 200px 200px;
   background-repeat: repeat;
+  animation: moveStars 60s linear infinite; /* slow drift */
+  pointer-events: none; /* let clicks through */
 }
 
 .header {
@@ -149,3 +160,29 @@
     gap: 1rem;
   }
 }
+
+
+
+.main {
+  height: 100vh;
+  width: 100%;
+  position: relative; /* creates a stacking context */
+  overflow: hidden;
+}
+
+
+
+.textArea {
+  position: relative; /* needed to apply z-index */
+  z-index: 1; /* sits above stars */
+  text-align: center;
+  padding-top: 30vh;
+  color: var(--text-muted, #ccc);
+}
+
+.text {
+  color: var(--text, #fff);
+  font-size: 2rem;
+}
+
+
