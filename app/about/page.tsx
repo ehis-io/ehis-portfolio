@@ -1,21 +1,21 @@
-"use client";
-import { useEffect } from "react";
-import styles from "./about.module.css";
+'use client';
+import { useEffect } from 'react';
+import styles from './about.module.css';
 
-export default function Home() {
+export default function About() {
   useEffect(() => {
-    const elements = document.querySelectorAll(".fade-in");
+    const elements = document.querySelectorAll('.fade-in');
 
     // Add .visible to all elements immediately on load
-    elements.forEach((el) => el.classList.add("visible"));
+    elements.forEach((el) => el.classList.add('visible'));
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
           } else {
-            entry.target.classList.remove("visible");
+            entry.target.classList.remove('visible');
           }
         });
       },
@@ -39,24 +39,24 @@ export default function Home() {
                 <div className={`fade-in ${styles.card}`}>
                   <p>
                     I’m <strong>Ehis Fidelis</strong>, a software engineer
-                    specializing in{" "}
+                    specializing in{' '}
                     <strong>
                       backend systems, cloud infrastructure, and applied AI
                     </strong>
-                    . I build{" "}
+                    . I build{' '}
                     <strong>
                       scalable APIs, microservices, and automation tools
-                    </strong>{" "}
+                    </strong>{' '}
                     using <strong>NestJS, Go, and Python</strong>, with
-                    experience in{" "}
+                    experience in{' '}
                     <strong>healthtech, fintech, and blockchain</strong>.
                   </p>
                   <p>
-                    I’ve developed platforms like{" "}
-                    <strong>real estate auction systems</strong> and an{" "}
+                    I’ve developed platforms like{' '}
+                    <strong>real estate auction systems</strong> and an{' '}
                     <strong>AI-powered health app</strong>, handling both
                     backend architecture and machine learning pipelines. I focus
-                    on{" "}
+                    on{' '}
                     <strong>
                       reliability, performance, and clean architecture
                     </strong>
@@ -64,13 +64,13 @@ export default function Home() {
                     load.
                   </p>
                   <p>
-                    Outside of coding, I enjoy{" "}
+                    Outside of coding, I enjoy{' '}
                     <strong>
                       playing guitar, exploring financial markets,
                       cybersecurity, ethical hacking, philosophy, and blockchain
                       systems
                     </strong>
-                    . I’m passionate about building tools and systems that{" "}
+                    . I’m passionate about building tools and systems that{' '}
                     <strong>
                       make sense, solve real problems, and just work
                     </strong>

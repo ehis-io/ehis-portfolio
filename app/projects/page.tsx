@@ -71,38 +71,46 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section className={styles.section} id="projects">
-      <div className={styles.mainContainer}>
-        <h2 className={styles.title}>Featured Projects</h2>
-        <div className={styles.grid}>
-          {projects.map((project, index) => (
-            <a
-              key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.cardLink} // link wrapper styling
-              aria-label={`Visit ${project.title} project`}
-            >
-              <div className={styles.card}>
-                <img
-                  src={project.imageUrl}
-                  alt={`${project.title} screenshot`}
-                  className={styles.image}
-                />
-                <h3 className={styles.titleCard}>{project.title}</h3>
-                <p className={styles.description}>{project.description}</p>
+      <div>
+        <div className={styles.mainContainer}>
+          <h2 className={styles.title}>Featured Projects</h2>
+          <div className={styles.grid}>
+            {projects.map((project, index) => (
+              <a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.cardLink} // link wrapper styling
+                aria-label={`Visit ${project.title} project`}
+              >
+                <div className={styles.card}>
+                  <img
+                    src={project.imageUrl}
+                    alt={`${project.title} screenshot`}
+                    className={styles.image}
+                  />
+                  <h3 className={styles.titleCard}>{project.title}</h3>
+                  <p className={styles.description}>{project.description}</p>
 
-                <div className={styles.techStack}>
-                  {project.stack.map((tech, i) => (
-                    <span key={i} className={styles.techItem}>
-                      {tech}
-                    </span>
-                  ))}
+                  <div className={styles.techStack}>
+                    {project.stack.map((tech, i) => (
+                      <span key={i} className={styles.techItem}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <button className={styles.viewButton}>View Project</button>
                 </div>
-                <button className={styles.viewButton}>View Project</button>
-              </div>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.more}>
+          <a href="#" className={styles.secondaryBtn}>
+            View More →
+          </a>
         </div>
       </div>
     </section>
