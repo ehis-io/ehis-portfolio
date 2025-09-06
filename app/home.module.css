@@ -18,6 +18,15 @@
   width: 100vw;
 }
 
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px -200px; /* moves diagonally */
+  }
+}
+
 .stars {
   position: absolute;
   inset: 0;
@@ -44,6 +53,8 @@
     );
   background-size: 200px 200px;
   background-repeat: repeat;
+  animation: moveStars 60s linear infinite; /* slow drift */
+  pointer-events: none; /* let clicks through */
 }
 
 .subtagline {
