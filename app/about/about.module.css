@@ -183,7 +183,7 @@
   }
 
   .container {
-    height: fit-content;
+    height: 100vh;
   }
 
   .headingOne {
