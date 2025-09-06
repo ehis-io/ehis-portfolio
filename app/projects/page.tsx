@@ -1,68 +1,70 @@
-import React from "react";
-import styles from "./project.module.css";
+import React from 'react';
+import styles from './project.module.css';
 
 const projects = [
   {
-    title: "HerSync",
+    title: 'HerSync',
     description:
-      "AI-powered menstrual health app with a NestJS + Python backend. Features personalized cycle prediction, anomaly detection.",
-    stack: ["NodeJS", "Python", "PostgreSQL"],
+      'AI-powered menstrual health app with a NestJS + Python backend. Features personalized cycle prediction, anomaly detection.',
+    stack: ['NodeJS', 'Python', 'PostgreSQL'],
     imageUrl:
-      "https://res.cloudinary.com/podcast-file/image/upload/v1747433667/hersync_lb32te.jpg",
-    link: "https://hersync.com.ng",
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747433667/hersync_lb32te.jpg',
+    link: 'https://hersync.com.ng',
   },
   {
-    title: "Wasset",
+    title: 'Wasset',
     description:
-      "Architected and built the backend for a real estate platform using NestJS, supporting real-time bidding and notifications.",
-    stack: ["NodeJS", "PostgreSQL", "HTML", "CSS"],
+      'Architected and built the backend for a real estate platform using NestJS, supporting real-time bidding and notifications.',
+    stack: ['NodeJS', 'PostgreSQL', 'HTML', 'CSS'],
     imageUrl:
-      "https://res.cloudinary.com/podcast-file/image/upload/v1747434729/logo-new_ye2pth.webp",
-    link: "https://thewaseet.com",
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747434729/logo-new_ye2pth.webp',
+    link: 'https://thewaseet.com',
+  },
+
+  {
+    title: 'MomentsX',
+    description:
+      'Developed MomentsX, an AI-powered SaaS hosting and ticketing platform for managing special experiences and social events. Integrated AI features for personalized recommendations.',
+    stack: ['NodeJS', 'PostgreSQL', 'HTML', 'CSS'],
+    imageUrl: 'https://momentsxnately.com/wp-content/uploads/2025/02/MS1.png',
+    link: 'https://momentsxnately.com',
   },
   {
-    title: "Trade Assist",
+    title: 'Abaru Logistics',
     description:
-      "A Flutter-based trading companion app with stop-loss, take-profit, and position size calculators. Includes performance analytics and a Go backend for sync and authentication.",
-    stack: ["Flutter", "Go"],
+      'Built scalable APIs for order management handling 4,000+ shipments/month. Developed real-time shipment tracking with WebSockets and Redis, reducing ETA errors by 35%. Implemented secure authentication and integrated payment systems.',
+    stack: ['NodeJS', 'PostgreSQL', 'HTML', 'CSS'],
     imageUrl:
-      "https://res.cloudinary.com/podcast-file/image/upload/v1747434923/Untitled_b5mv3u.png",
-    link: "",
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747433153/abaru_logo_ixflzf.jpg',
+    link: 'https://abaru.io',
   },
   {
-    title: "MomentsX",
+    title: 'Tafipal',
     description:
-      "Developed MomentsX, an AI-powered SaaS hosting and ticketing platform for managing special experiences and social events. Integrated AI features for personalized recommendations.",
-    stack: ["NodeJS", "PostgreSQL", "HTML", "CSS"],
-    imageUrl: "https://momentsxnately.com/wp-content/uploads/2025/02/MS1.png",
-    link: "https://momentsxnately.com",
+      'Developed Tafipal, a ticketing platform for managing special experiences like tours and social events.',
+    stack: ['NodeJS', 'PostgreSQL', 'HTML', 'CSS'],
+    imageUrl:
+      'https://res.cloudinary.com/tafi-cloud/image/upload/v1672161120/email-template/Tafipal_ALONE_rvgoi1.png',
+    link: 'https://tafipal.com',
   },
   {
-    title: "Abaru Logistics",
+    title: 'Dutch Token Swap',
     description:
-      "Built scalable APIs for order management handling 4,000+ shipments/month. Developed real-time shipment tracking with WebSockets and Redis, reducing ETA errors by 35%. Implemented secure authentication and integrated payment systems.",
-    stack: ["NodeJS", "PostgreSQL", "HTML", "CSS"],
+      'Full-stack DeFi staking app for yield farming, borrowing, lending. Allows users to stake tokens, add approved tokens, track total value via Chainlink Price Feeds, and issue rewards.',
+    stack: ['Solidity', 'Python', 'React', 'Material UI'],
     imageUrl:
-      "https://res.cloudinary.com/podcast-file/image/upload/v1747433153/abaru_logo_ixflzf.jpg",
-    link: "https://abaru.io",
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747432797/web-image_bl8bk2.png',
+    link: 'https://github.com/ehis-io/dutch_token_farm',
   },
+
   {
-    title: "Tafipal",
+    title: 'Trade Assist',
     description:
-      "Developed Tafipal, a ticketing platform for managing special experiences like tours and social events.",
-    stack: ["NodeJS", "PostgreSQL", "HTML", "CSS"],
+      'A Flutter-based trading companion app with stop-loss, take-profit, and position size calculators. Includes performance analytics and a Go backend for sync and authentication.',
+    stack: ['Flutter', 'Go'],
     imageUrl:
-      "https://res.cloudinary.com/tafi-cloud/image/upload/v1672161120/email-template/Tafipal_ALONE_rvgoi1.png",
-    link: "https://tafipal.com",
-  },
-  {
-    title: "Dutch Token Swap",
-    description:
-      "Full-stack DeFi staking app for yield farming, borrowing, lending. Allows users to stake tokens, add approved tokens, track total value via Chainlink Price Feeds, and issue rewards.",
-    stack: ["Solidity", "Python", "React", "Material UI"],
-    imageUrl:
-      "https://res.cloudinary.com/podcast-file/image/upload/v1747432797/web-image_bl8bk2.png",
-    link: "https://github.com/ehis-io/dutch_token_farm",
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747434923/Untitled_b5mv3u.png',
+    link: '',
   },
 ];
 

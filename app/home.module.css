@@ -225,13 +225,14 @@
   }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 800px) {
   .sectionOne {
     height: auto;
   }
   .home {
     padding-right: 2em;
     padding-top: 2em;
+    height: 100vh;
   }
 
   .subtagline {
