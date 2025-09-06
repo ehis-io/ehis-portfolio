@@ -38,7 +38,7 @@
 
 .lightMode {
   font-size: x-large;
-  color: #fff;
+  color: var(--text);
 }
 
 .nameLink:hover {
