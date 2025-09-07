@@ -20,6 +20,7 @@ export default function Navbar() {
     const prefersDark = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches;
+
     const htmlHasDark = document.documentElement.classList.contains('dark');
     setIsDark(htmlHasDark || prefersDark);
   }, []);
@@ -29,18 +30,6 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   // toggle theme manually (optional)
-  const toggleTheme = () => {
-    const html = document.documentElement;
-    if (isDark) {
-      html.classList.remove('dark');
-      html.classList.add('light');
-      setIsDark(false);
-    } else {
-      html.classList.remove('light');
-      html.classList.add('dark');
-      setIsDark(true);
-    }
-  };
 
   return (
     <main className={styles.main}>
