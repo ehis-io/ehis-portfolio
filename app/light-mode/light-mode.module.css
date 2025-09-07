@@ -51,9 +51,9 @@
   border-radius: 9999px;
   border: none;
   background: var(--background-color);
-  color: white;
+  color: var(--text);
   cursor: pointer;
-  font-size: 5em;
+  font-size: 4em;
   transition: top 0.2s ease, left 0.2s ease;
   position: relative;
   z-index: 4;
