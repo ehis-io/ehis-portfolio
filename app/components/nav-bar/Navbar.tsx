@@ -3,7 +3,12 @@
 import { useState } from 'react';
 import styles from './nav.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faSun } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faTimes,
+  faSun,
+  faMoon,
+} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -34,6 +39,7 @@ export default function Navbar() {
               Home
             </Link>
           </li>
+
           <li>
             <Link href="/about" onClick={closeMenu} className={styles.linkItem}>
               About
@@ -61,12 +67,7 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      <Link
-        className={styles.lightMode}
-        href="/light-mode"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link className={styles.lightMode} href="/light-mode">
         <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
       </Link>
 
