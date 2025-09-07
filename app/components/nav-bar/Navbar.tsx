@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './nav.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,13 +13,33 @@ import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    // detect dark mode initially
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    const htmlHasDark = document.documentElement.classList.contains('dark');
+    setIsDark(htmlHasDark || prefersDark);
+  }, []);
 
-  const closeMenu = () => {
-    setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const closeMenu = () => setIsOpen(false);
+
+  // toggle theme manually (optional)
+  const toggleTheme = () => {
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      setIsDark(false);
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      setIsDark(true);
+    }
   };
 
   return (
@@ -67,8 +87,9 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      <Link className={styles.lightMode} href="/light-mode">
-        <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+      {/* This button toggles theme & changes icon */}
+      <Link href="/light-mode" className={styles.lightMode}>
+        <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
       </Link>
 
       <div className={styles.right}>
@@ -81,7 +102,6 @@ export default function Navbar() {
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        {' '}
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </div>
     </main>
