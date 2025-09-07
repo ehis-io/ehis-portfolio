@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import styles from './light-mode.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
 
 export default function LightModeSection() {
@@ -15,7 +15,7 @@ export default function LightModeSection() {
   // moves button randomly
   const moveButton = () => {
     // only move while count < 10
-    if (count < 10) {
+    if (count < 15) {
       const randomTop = Math.floor(Math.random() * 70) + 10; // 10% to 80%
       const randomLeft = Math.floor(Math.random() * 70) + 10; // 10% to 80%
       setPosition({ top: `${randomTop}%`, left: `${randomLeft}%` });
@@ -75,7 +75,7 @@ export default function LightModeSection() {
           onMouseEnter={moveButton} // will move only if count < 10
           onClick={handleClick}
         >
-          <FontAwesomeIcon icon={theme === 'dark' ? faLightbulb : faMoon} />{' '}
+          <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} />{' '}
         </button>
       </div>
     </main>
