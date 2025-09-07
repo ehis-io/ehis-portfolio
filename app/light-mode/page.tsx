@@ -2,22 +2,29 @@
 import { useState, useEffect } from 'react';
 import styles from './light-mode.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
+
 export default function LightModeSection() {
   const [position, setPosition] = useState({ top: '50%', left: '50%' });
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [count, setCount] = useState(0); // count how many times they've tried
 
-  const moveButton = () => {
-    const randomTop = Math.floor(Math.random() * 70) + 10; // 10% to 80%
-    const randomLeft = Math.floor(Math.random() * 70) + 10; // 10% to 80%
-    setPosition({ top: `${randomTop}%`, left: `${randomLeft}%` });
-  };
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const router = useRouter();
+
+  // moves button randomly
+  const moveButton = () => {
+    // only move while count < 10
+    if (count < 10) {
+      const randomTop = Math.floor(Math.random() * 70) + 10; // 10% to 80%
+      const randomLeft = Math.floor(Math.random() * 70) + 10; // 10% to 80%
+      setPosition({ top: `${randomTop}%`, left: `${randomLeft}%` });
+      setCount((prev) => prev + 1); // increment count
+    }
+  };
 
   const handleClick = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
-
     // Update document class
     document.documentElement.classList.remove('dark', 'light');
     document.documentElement.classList.add(newTheme);
@@ -31,7 +38,9 @@ export default function LightModeSection() {
     // Optional: redirect after short delay to let user see effect
     setTimeout(() => router.push('/'), 200); // 200ms delay
   };
+
   useEffect(() => {
+    document.documentElement.classList.remove('dark', 'light');
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light' || savedTheme === 'dark') {
       setTheme(savedTheme);
@@ -40,8 +49,9 @@ export default function LightModeSection() {
       const prefersDark = window.matchMedia(
         '(prefers-color-scheme: dark)'
       ).matches;
-      setTheme(prefersDark ? 'dark' : 'light');
-      document.documentElement.classList.add(prefersDark ? 'dark' : 'light');
+      const initialTheme = prefersDark ? 'dark' : 'light';
+      setTheme(initialTheme);
+      document.documentElement.classList.add(initialTheme);
     }
   }, []);
 
@@ -62,10 +72,10 @@ export default function LightModeSection() {
             top: position.top,
             left: position.left,
           }}
-          onMouseEnter={moveButton}
-          onClick={handleClick} // ✅ corrected
+          onMouseEnter={moveButton} // will move only if count < 10
+          onClick={handleClick}
         >
-          <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={theme === 'dark' ? faLightbulb : faMoon} />{' '}
         </button>
       </div>
     </main>

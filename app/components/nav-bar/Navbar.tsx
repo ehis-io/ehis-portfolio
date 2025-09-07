@@ -1,21 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './nav.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faSun } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faTimes,
+  faSun,
+  faMoon,
+} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    // detect dark mode initially
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+    const htmlHasDark = document.documentElement.classList.contains('dark');
+    setIsDark(htmlHasDark || prefersDark);
+  }, []);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const closeMenu = () => setIsOpen(false);
+
+  // toggle theme manually (optional)
 
   return (
     <main className={styles.main}>
@@ -34,6 +48,7 @@ export default function Navbar() {
               Home
             </Link>
           </li>
+
           <li>
             <Link href="/about" onClick={closeMenu} className={styles.linkItem}>
               About
@@ -61,13 +76,9 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      <Link
-        className={styles.lightMode}
-        href="/light-mode"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+      {/* This button toggles theme & changes icon */}
+      <Link href="/light-mode" className={styles.lightMode}>
+        <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
       </Link>
 
       <div className={styles.right}>
@@ -80,7 +91,6 @@ export default function Navbar() {
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        {' '}
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </div>
     </main>
