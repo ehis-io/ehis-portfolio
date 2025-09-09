@@ -13,6 +13,7 @@ import {
   Michroma,
   Moo_Lah_Lah,
 } from 'next/font/google';
+import { ThemeProvider } from './hooks/theme-context';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const playfair = Playfair_Display({
@@ -47,12 +48,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${michroma.variable} ${moo_Lah_Lah.variable}`}
       >
-        {' '}
-        <ThemeInitializer />
-        <Navbar />
-        <Sidebar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <ThemeInitializer /> {/* optional if it sets the initial theme */}
+          <Navbar />
+          <Sidebar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
