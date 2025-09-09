@@ -11,18 +11,27 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
+import { useTheme } from '../../hooks/theme-context';
+
 export default function Navbar() {
+  const { theme } = useTheme();
+
+  <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} />;
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
-
   useEffect(() => {
-    // detect dark mode initially
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
+    const checkTheme = () => {
+      const savedTheme = localStorage.getItem('theme');
+      setIsDark(savedTheme === 'dark');
+    };
 
-    const htmlHasDark = document.documentElement.classList.contains('dark');
-    setIsDark(htmlHasDark || prefersDark);
+    // check initially
+    checkTheme();
+
+    // optional: also check whenever the page gains focus
+    window.addEventListener('focus', checkTheme);
+
+    return () => window.removeEventListener('focus', checkTheme);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -108,7 +117,7 @@ export default function Navbar() {
 
       {/* This button toggles theme & changes icon */}
       <Link href="/light-mode" className={styles.lightMode}>
-        <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
+        <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} />
       </Link>
 
       <div className={styles.right}>
