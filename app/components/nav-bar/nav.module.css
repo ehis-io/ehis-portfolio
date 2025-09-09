@@ -18,14 +18,18 @@
   color: var(--text-color);
 }
 
-.nameLink {
-  list-style: none;
-  font-size: 0.8rem;
-  font-weight: bold;
-  width: fit-content;
-  color: var(--text-color);
-  text-decoration: none;
+.nameLink svg {
+  display: block; /* remove inline gap */
+  width: 2.5rem; /* scale with text size */
+  height: 2.5rem;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
+
+.nameLink:hover svg {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
 .header {
   font-family: var(--font-moo_Lah_Lah);
   color: var(--accent-color);
@@ -44,13 +48,6 @@
   border: none;
 }
 
-.nameLink:hover {
-  color: var(--accent-color);
-  transition: all 0.5s ease-in-out;
-
-  box-shadow: 0px 0px 5px var(--accent-color);
-  transform: scale(1.05);
-}
 .navbar {
   display: flex;
   justify-content: right;
