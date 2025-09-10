@@ -160,7 +160,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
-    margin-left: 0git;
+    margin-left: 0;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
   }
