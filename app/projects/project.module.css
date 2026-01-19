@@ -1,193 +1,204 @@
 .section {
-  padding: 2rem 1rem; /* slightly smaller padding */
-  background-color: var(--background-color);
+  padding: 8rem 1rem 4rem 1rem;
+  /* Increased top padding to clear navbar */
+  min-height: 100vh;
+  background: transparent;
+  /* allow global aurora to show */
+  position: relative;
 }
 
 .mainContainer {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: auto;
-  padding-top: 3em;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--accent-color);
+  margin-bottom: 3rem;
+  color: var(--text-color);
   text-align: center;
-  letter-spacing: -0.5px;
-  align-self: center;
+  font-family: var(--font-michroma);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 4rem;
-  column-gap: 1.5rem;
-}
-
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 640px) {
-    .titleCard {
-      font-size: 1rem;
-    }
-    .description {
-      font-size: 0.8rem;
-    }
-    .techItem {
-      font-size: 0.6rem;
-      padding: 0.2rem 0.5rem;
-    }
-    .viewButton {
-      font-size: 0.7rem;
-      padding: 0.4rem 0.8rem;
-    }
-    .image {
-      height: 100px;
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  gap: 2rem;
+  padding: 1rem;
 }
 
 .cardLink {
   text-decoration: none;
   color: inherit;
   display: block;
-  border-radius: 0.8rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.cardLink:hover .card {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 1.5rem;
+  height: 100%;
 }
 
 .card {
-  background: var(--primary-color);
-  border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Gradient Glow Effect on Hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardLink:hover .card {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+.cardLink:hover .card::before {
+  opacity: 1;
 }
 
 .image {
   width: 100%;
-  height: 120px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 0.75rem;
-  background-color: #f5f5f5;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.cardLink:hover .image {
+  transform: scale(1.02);
 }
 
 .titleCard {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-  color: var(--accent-color);
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-family: var(--font-inter);
 }
 
 .description {
   flex-grow: 1;
-  color: var(--text-color);
-  margin-bottom: 0.75rem;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  align-self: center;
-  text-align: center;
-  font-weight: 200;
   color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .techStack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.75rem;
-  align-self: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .techItem {
-  background-color: var(--background-color);
-  border-radius: 999px;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.65rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
   color: var(--accent-color);
   font-weight: 600;
-  white-space: nowrap;
-  align-self: center;
 }
 
 .viewButton {
   margin-top: auto;
-  padding: 0.5rem 1rem;
-  background-color: var(--accent-color);
-  color: #fff;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-color);
+  color: white;
   border: none;
-  border-radius: 999px;
+  border-radius: 2rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 1rem;
-  align-self: center;
-  transition: background-color 0.25s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .viewButton:hover {
-  background-color: #357a38;
-  transform: scale(1.05);
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
+
 .more {
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .secondaryBtn {
-  margin-top: 5em;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #cfffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
+  padding: 1rem 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  border-radius: 3rem;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: background-color 0.3s ease;
+  border: 1px solid var(--text-muted);
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .secondaryBtn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: var(--text-color);
+  color: var(--background-color);
+  border-color: var(--text-color);
 }
-/* Responsive tweaks for smaller screens */
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 640px) {
+  .section {
+    padding-top: 6rem;
+  }
+
   .title {
-    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
+
+  .card {
+    padding: 1rem;
+  }
+
   .image {
-    height: 100px;
-  }
-  .titleCard {
-    font-size: 1rem;
-  }
-  .description {
-    font-size: 0.8rem;
-  }
-  .techItem {
-    font-size: 0.6rem;
-    padding: 0.2rem 0.5rem;
-  }
-  .viewButton {
-    font-size: 0.7rem;
-    padding: 0.4rem 0.8rem;
+    height: 160px;
   }
 }

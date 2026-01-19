@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { motion, Variants } from 'framer-motion';
 import styles from './project.module.css';
 
 const projects = [
@@ -69,49 +71,93 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 50,
+        damping: 15,
+      },
+    },
+  };
+
   return (
     <section className={styles.section} id="projects">
-      <div>
-        <div className={styles.mainContainer}>
-          <h2 className={styles.title}>Featured Projects</h2>
-          <div className={styles.grid}>
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.cardLink} // link wrapper styling
-                aria-label={`Visit ${project.title} project`}
-              >
-                <div className={styles.card}>
-                  <img
-                    src={project.imageUrl}
-                    alt={`${project.title} screenshot`}
-                    className={styles.image}
-                  />
-                  <h3 className={styles.titleCard}>{project.title}</h3>
-                  <p className={styles.description}>{project.description}</p>
+      <div className={styles.mainContainer}>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className={styles.title}
+        >
+          Featured Projects
+        </motion.h2>
 
-                  <div className={styles.techStack}>
-                    {project.stack.map((tech, i) => (
-                      <span key={i} className={styles.techItem}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <button className={styles.viewButton}>View Project</button>
+        <motion.div
+          className={styles.grid}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {projects.map((project, index) => (
+            <motion.a
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.cardLink}
+              aria-label={`Visit ${project.title} project`}
+              variants={cardVariants}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <article className={styles.card}>
+                <img
+                  src={project.imageUrl}
+                  alt={`${project.title} screenshot`}
+                  className={styles.image}
+                  loading="lazy"
+                />
+                <h3 className={styles.titleCard}>{project.title}</h3>
+                <p className={styles.description}>{project.description}</p>
+
+                <div className={styles.techStack}>
+                  {project.stack.map((tech, i) => (
+                    <span key={i} className={styles.techItem}>
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </a>
-            ))}
-          </div>
-        </div>
+                <button className={styles.viewButton}>View Project</button>
+              </article>
+            </motion.a>
+          ))}
+        </motion.div>
 
-        <div className={styles.more}>
+        <motion.div
+          className={styles.more}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
           <a href="#" className={styles.secondaryBtn}>
             View More →
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
