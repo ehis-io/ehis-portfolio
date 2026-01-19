@@ -46,7 +46,8 @@
 }
 
 .headingOne {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  /* Reduced max size */
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -58,7 +59,8 @@
 }
 
 .headingTwo {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  /* Reduced max size */
   color: var(--accent-color);
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -66,7 +68,8 @@
 }
 
 .headingThree {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  /* Slightly smaller */
   color: var(--text-color);
   font-family: var(--font-inter);
   font-weight: 400;
@@ -74,7 +77,7 @@
 }
 
 .subtagline {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--text-muted);
@@ -83,7 +86,7 @@
 
 .description {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--secondary-color);
   min-height: 2rem;
   margin-bottom: 2.5rem;
@@ -158,9 +161,11 @@
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  padding: 1.5rem 2rem;
+  /* Reduced padding */
   border-radius: 20px;
-  min-width: 200px;
+  min-width: 180px;
+  /* Reduced min width */
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -171,7 +176,8 @@
 }
 
 .statNumber {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  /* Reduced from 3rem */
   font-weight: 800;
   color: var(--accent-color);
   margin-bottom: 0.5rem;
@@ -182,34 +188,64 @@
 
 .statLabel {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .sectionOne {
+    padding: 1rem;
+  }
+
   .headingOne {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .headingTwo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .headingThree {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    gap: 2.5rem;
   }
 
   .stats {
     flex-direction: column;
     align-items: stretch;
     gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .statItem {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .statNumber {
+    font-size: 2rem;
   }
 
   .buttonGroup {
     flex-direction: column;
     width: 100%;
+    padding: 0 1rem;
   }
 
   .projectsButton,
   .resumeButton {
     width: 100%;
+    padding: 0.9rem;
+    font-size: 0.95rem;
   }
 }
