@@ -3,13 +3,22 @@ import styles from './project.module.css';
 
 const projects = [
   {
+    title: 'Dutchman Bridge',
+    description:
+      'A non-custodial conversion rail providing the fastest protocol for individuals and businesses to liquidate digital assets directly to local bank accounts with enterprise-grade security.',
+    stack: ['NodeJS', 'React', 'Web3', 'Blockchain'],
+    imageUrl:
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747432797/web-image_bl8bk2.png',
+    link: 'https://dutchmannetwork.online',
+  },
+  {
     title: 'HerSync',
     description:
       'AI-powered menstrual health app with a NestJS + Python backend. Features personalized cycle prediction, anomaly detection.',
     stack: ['NodeJS', 'Python', 'PostgreSQL'],
     imageUrl:
       'https://res.cloudinary.com/podcast-file/image/upload/v1747433667/hersync_lb32te.jpg',
-    link: 'https://hersync.com.ng',
+    link: 'https://hersync.app',
   },
   {
     title: 'Wasset',
@@ -19,6 +28,16 @@ const projects = [
     imageUrl:
       'https://res.cloudinary.com/podcast-file/image/upload/v1747434729/logo-new_ye2pth.webp',
     link: 'https://thewaseet.com',
+  },
+
+  {
+    title: 'Trade Assist',
+    description:
+      'A Flutter-based trading companion app with stop-loss, take-profit, and position size calculators. Includes performance analytics and a Go backend for sync and authentication.',
+    stack: ['Flutter', 'Go'],
+    imageUrl:
+      'https://res.cloudinary.com/podcast-file/image/upload/v1747434923/Untitled_b5mv3u.png',
+    link: '',
   },
 
   {
@@ -57,14 +76,34 @@ const projects = [
     link: 'https://github.com/ehis-io/dutch_token_farm',
   },
 
+
   {
-    title: 'Trade Assist',
-    description:
-      'A Flutter-based trading companion app with stop-loss, take-profit, and position size calculators. Includes performance analytics and a Go backend for sync and authentication.',
-    stack: ['Flutter', 'Go'],
-    imageUrl:
-      'https://res.cloudinary.com/podcast-file/image/upload/v1747434923/Untitled_b5mv3u.png',
-    link: '',
+    title: 'native-app',
+    description: 'Mg30 screen compatible with v5',
+    stack: ['JavaScript'],
+    imageUrl: '',
+    link: 'https://github.com/ehis-io/native-app',
+  },
+  {
+    title: 'web3.py',
+    description: 'A python interface for interacting with the Ethereum blockchain and ecosystem.',
+    stack: ['Python'],
+    imageUrl: '',
+    link: 'https://github.com/ehis-io/web3.py',
+  },
+  {
+    title: 'chat-assistan-frontend',
+    description: 'Frontend for AI chat assistant.',
+    stack: ['TypeScript'],
+    imageUrl: '',
+    link: 'https://github.com/ehis-io/chat-assistan-frontend',
+  },
+  {
+    title: 'streaming-mobile',
+    description: 'Mobile interface for streaming application.',
+    stack: ['HTML'],
+    imageUrl: '',
+    link: 'https://github.com/ehis-io/streaming-mobile',
   },
 ];
 
