@@ -37,7 +37,7 @@ const projects = [
       'A Flutter-based trading companion app with stop-loss, take-profit, and position size calculators. Includes performance analytics and a Go backend for sync and authentication.',
     stack: ['Flutter', 'Go'],
     imageUrl:
-      'https://res.cloudinary.com/podcast-file/image/upload/v1747434923/Untitled_b5mv3u.png',
+      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800',
     link: '',
   },
 
@@ -85,27 +85,27 @@ const projects = [
     imageUrl: '/projects/native_app_mockup_1780909751031.png',
     link: 'https://github.com/ehis-io/native-app',
   },
-  {
-    title: 'web3.py',
-    description: 'A python interface for interacting with the Ethereum blockchain and ecosystem.',
-    stack: ['Python'],
-    imageUrl: '/projects/web3_python_graphic_1780909783606.png',
-    link: 'https://github.com/ehis-io/web3.py',
-  },
-  {
-    title: 'chat-assistan-frontend',
-    description: 'Frontend for AI chat assistant.',
-    stack: ['TypeScript'],
-    imageUrl: '/projects/chat_assistant_ui_1780909799640.png',
-    link: 'https://github.com/ehis-io/chat-assistan-frontend',
-  },
-  {
-    title: 'streaming-mobile',
-    description: 'Mobile interface for streaming application.',
-    stack: ['HTML'],
-    imageUrl: '/projects/streaming_mobile_ui_1780909813802.png',
-    link: 'https://github.com/ehis-io/streaming-mobile',
-  },
+  // {
+  //   title: 'web3.py',
+  //   description: 'A python interface for interacting with the Ethereum blockchain and ecosystem.',
+  //   stack: ['Python'],
+  //   imageUrl: '/projects/web3_python_graphic_1780909783606.png',
+  //   link: 'https://github.com/ehis-io/web3.py',
+  // },
+  // {
+  //   title: 'chat-assistan-frontend',
+  //   description: 'Frontend for AI chat assistant.',
+  //   stack: ['TypeScript'],
+  //   imageUrl: '/projects/chat_assistant_ui_1780909799640.png',
+  //   link: 'https://github.com/ehis-io/chat-assistan-frontend',
+  // },
+  // {
+  //   title: 'streaming-mobile',
+  //   description: 'Mobile interface for streaming application.',
+  //   stack: ['HTML'],
+  //   imageUrl: '/projects/streaming_mobile_ui_1780909813802.png',
+  //   link: 'https://github.com/ehis-io/streaming-mobile',
+  // },
 ];
 
 export default function ProjectsSection() {
