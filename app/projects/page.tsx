@@ -9,7 +9,7 @@ const projects = [
     description:
       'A non-custodial conversion rail providing the fastest protocol for individuals and businesses to liquidate digital assets directly to local bank accounts with enterprise-grade security.',
     stack: ['NodeJS', 'React', 'Web3', 'Blockchain'],
-    imageUrl: '/projects/dutchman_bridge_logo_1780911736382.png',
+    imageUrl: '/ehis-portfolio/projects/dutchman_bridge_logo_1780911736382.png',
     link: 'https://dutchmannetwork.online',
   },
   {
@@ -79,33 +79,27 @@ const projects = [
 
 
   {
-    title: 'native-app',
+    title: 'Mg30 Screen Simulator',
     description: 'Mg30 screen compatible with v5',
     stack: ['JavaScript'],
-    imageUrl: '/projects/native_app_mockup_1780909751031.png',
+    imageUrl: '/ehis-portfolio/projects/mg30_pedal_logo_1780924700585.png',
     link: 'https://github.com/ehis-io/native-app',
   },
-  // {
-  //   title: 'web3.py',
-  //   description: 'A python interface for interacting with the Ethereum blockchain and ecosystem.',
-  //   stack: ['Python'],
-  //   imageUrl: '/projects/web3_python_graphic_1780909783606.png',
-  //   link: 'https://github.com/ehis-io/web3.py',
-  // },
-  // {
-  //   title: 'chat-assistan-frontend',
-  //   description: 'Frontend for AI chat assistant.',
-  //   stack: ['TypeScript'],
-  //   imageUrl: '/projects/chat_assistant_ui_1780909799640.png',
-  //   link: 'https://github.com/ehis-io/chat-assistan-frontend',
-  // },
-  // {
-  //   title: 'streaming-mobile',
-  //   description: 'Mobile interface for streaming application.',
-  //   stack: ['HTML'],
-  //   imageUrl: '/projects/streaming_mobile_ui_1780909813802.png',
-  //   link: 'https://github.com/ehis-io/streaming-mobile',
-  // },
+  {
+    title: 'web3.py',
+    description: 'A python interface for interacting with the Ethereum blockchain and ecosystem.',
+    stack: ['Python'],
+    imageUrl: '/ehis-portfolio/projects/web3_python_graphic_1780909783606.png',
+    link: 'https://github.com/ehis-io/web3.py',
+  },
+
+  {
+    title: 'streaming-mobile',
+    description: 'Mobile interface for streaming application.',
+    stack: ['HTML'],
+    imageUrl: '/ehis-portfolio/projects/streaming_mobile_ui_1780909813802.png',
+    link: 'https://github.com/ehis-io/streaming-mobile',
+  },
 ];
 
 export default function ProjectsSection() {
