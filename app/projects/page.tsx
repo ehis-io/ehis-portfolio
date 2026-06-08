@@ -7,7 +7,7 @@ const projects = [
     description:
       'A non-custodial conversion rail providing the fastest protocol for individuals and businesses to liquidate digital assets directly to local bank accounts with enterprise-grade security.',
     stack: ['NodeJS', 'React', 'Web3', 'Blockchain'],
-    imageUrl: '/projects/dutchman_bridge_ui_1780910592440.png',
+    imageUrl: '/projects/dutchman_bridge_logo_1780911736382.png',
     link: 'https://dutchmannetwork.online',
   },
   {
